@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ASSETS/fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ASSETS/fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ASSETS/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/Creditos.gd" type="Script" id=4]
+[ext_resource path="res://ASSETS/logo.jpg" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 2
+outline_color = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+outline_size = 1
+outline_color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1089.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="Sprite" parent="."]
+position = Vector2( 832, 320 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 672.0
+margin_top = 443.0
+margin_right = 970.0
+margin_bottom = 473.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.972549, 0.956863, 0.956863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "IDEA ORIGINAL "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 672.0
+margin_top = 480.0
+margin_right = 871.0
+margin_bottom = 506.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DAVID ALEGRIA QUISPE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 672.0
+margin_top = 512.0
+margin_right = 933.0
+margin_bottom = 538.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MATEMÁTICO E INFORMÁTICO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 672.0
+margin_top = 544.0
+margin_right = 793.0
+margin_bottom = 570.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "CEL.: 76747610"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 800.0
+margin_top = 608.0
+margin_right = 1032.0
+margin_bottom = 645.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.968627, 0.027451, 0.027451, 1 )
+custom_colors/font_color_hover = Color( 0.054902, 0.788235, 0.901961, 1 )
+custom_colors/font_color_pressed = Color( 0.054902, 0.717647, 0.109804, 1 )
+text = "VOLVER AL INICIO"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 800, 608 )
+scale = Vector2( 0.2, 0.2 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

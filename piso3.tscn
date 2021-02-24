@@ -1,0 +1,827 @@
+[gd_scene load_steps=75 format=2]
+
+[ext_resource path="res://traspasa_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://world_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://ASSETS/background/nubes.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/background/montanas.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/background/arboles.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/CanvasLayer.gd" type="Script" id=6]
+[ext_resource path="res://ASSETS/HUD/coin_gold.png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://ASSETS/inc.png" type="Texture" id=9]
+[ext_resource path="res://ASSETS/traje.png" type="Texture" id=10]
+[ext_resource path="res://ASSETS/gel.png" type="Texture" id=11]
+[ext_resource path="res://ASSETS/guantes2.png" type="Texture" id=12]
+[ext_resource path="res://ASSETS/jabon.png" type="Texture" id=13]
+[ext_resource path="res://ASSETS/burbuja1.png" type="Texture" id=14]
+[ext_resource path="res://ASSETS/lnetes.png" type="Texture" id=15]
+[ext_resource path="res://ASSETS/mascarilla.png" type="Texture" id=16]
+[ext_resource path="res://ASSETS/vidaperdida.png" type="Texture" id=17]
+[ext_resource path="res://ASSETS/vidas.png" type="Texture" id=18]
+[ext_resource path="res://ASSETS/UI/derecha.png" type="Texture" id=19]
+[ext_resource path="res://ASSETS/UI/izquierda.png" type="Texture" id=20]
+[ext_resource path="res://ASSETS/runpressed.png" type="Texture" id=21]
+[ext_resource path="res://ASSETS/run.png" type="Texture" id=22]
+[ext_resource path="res://ASSETS/saltar.png" type="Texture" id=23]
+[ext_resource path="res://ASSETS/saltarpressed.png" type="Texture" id=24]
+[ext_resource path="res://ASSETS/mallku/armar/mallkufondo.png" type="Texture" id=25]
+[ext_resource path="res://ASSETS/mallku/armar/armar_traje.png" type="Texture" id=26]
+[ext_resource path="res://ASSETS/mallku/armar/armar_barbijo.png" type="Texture" id=27]
+[ext_resource path="res://ASSETS/mallku/armar/armar_gel.png" type="Texture" id=28]
+[ext_resource path="res://ASSETS/mallku/armar/armar_guantes.png" type="Texture" id=29]
+[ext_resource path="res://ASSETS/mallku/armar/armar_jabon.png" type="Texture" id=30]
+[ext_resource path="res://ASSETS/mallku/armar/armar_lentes.png" type="Texture" id=31]
+[ext_resource path="res://ASSETS/mallku/armar/armar_mascara.png" type="Texture" id=32]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=33]
+[ext_resource path="res://coin2.tscn" type="PackedScene" id=34]
+[ext_resource path="res://coin3.tscn" type="PackedScene" id=35]
+[ext_resource path="res://coin4.tscn" type="PackedScene" id=36]
+[ext_resource path="res://coin5.tscn" type="PackedScene" id=37]
+[ext_resource path="res://coin6.tscn" type="PackedScene" id=38]
+[ext_resource path="res://coin7.tscn" type="PackedScene" id=39]
+[ext_resource path="res://enemy.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Steve.tscn" type="PackedScene" id=41]
+[ext_resource path="res://ASSETS/music/Retro Beat.ogg" type="AudioStream" id=42]
+[ext_resource path="res://Scripts/monitor.gd" type="Script" id=43]
+[ext_resource path="res://ASSETS/fonts/KiriFont.ttf" type="DynamicFontData" id=44]
+[ext_resource path="res://ASSETS/fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=45]
+[ext_resource path="res://plata.tscn" type="PackedScene" id=46]
+[ext_resource path="res://ASSETS/UI/izquierdapressed.png" type="Texture" id=47]
+[ext_resource path="res://ASSETS/UI/derechapressed.png" type="Texture" id=48]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 224, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 224, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 448, 32 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 127.543, 18.2044 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 448, 32 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 224, 32 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 224, 32 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 224, 32 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 448, 32 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 256, 32 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 224, 32 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 4640, 119.276 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.980392, 0.964706, 0.0156863, 0.329412 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=20]
+size = 52
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 80
+outline_size = 3
+outline_color = Color( 0.980392, 0.972549, 0.972549, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.917647, 0.47451, 0.47451, 0.572549 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=23]
+size = 70
+outline_size = 3
+outline_color = Color( 0.152941, 0.0705882, 0.878431, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+content_margin_left = 15.0
+content_margin_right = 15.0
+content_margin_top = 15.0
+content_margin_bottom = 15.0
+bg_color = Color( 0.8, 0.627451, 0.0980392, 0.694118 )
+border_color = Color( 0.964706, 0.941176, 0.941176, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color( 0.988235, 0.980392, 0.980392, 0.6 )
+shadow_size = 10
+
+[sub_resource type="DynamicFont" id=25]
+size = 40
+font_data = ExtResource( 44 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 35
+font_data = ExtResource( 45 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tile One-Way" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+collision_layer = 2147483650
+collision_mask = 49
+format = 1
+tile_data = PoolIntArray( -65493, 5, 0, -65448, 5, 0, 131078, 4, 0, 131098, 5, 0, 131113, 4, 0, 131133, 5, 0, 131146, 5, 0, 131158, 5, 0, 131162, 5, 0, 131182, 5, 0, 393208, 4, 0, 327683, 4, 0, 327690, 4, 0, 327703, 4, 0, 327718, 4, 0, 327725, 4, 0, 327740, 4, 0, 327752, 4, 0, 327764, 4, 0, 327771, 4, 0, 327788, 4, 0, 327801, 5, 0, 589842, 2, 0, 589843, 2, 0, 589858, 2, 0, 589859, 2, 0, 589881, 2, 0, 589882, 2, 0, 589904, 2, 0, 589905, 2, 0, 589927, 2, 0, 589928, 2, 0, 589943, 2, 0, 589944, 2, 0, 655378, 0, 0, 655379, 0, 0, 655394, 0, 0, 655395, 0, 0, 655417, 0, 0, 655418, 0, 0, 655440, 0, 0, 655441, 0, 0, 655463, 0, 0, 655464, 0, 0, 655479, 0, 0, 655480, 0, 0 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile One-Way"]
+collision_layer = 2
+collision_mask = 49
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 608, 160 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( -288, 352 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 1696, 352 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 640, 352 )
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 1790.5, 151.01 )
+shape = SubResource( 4 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 2880, 352 )
+shape = SubResource( 5 )
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 2848, 160 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 2880, -32 )
+shape = SubResource( 7 )
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 4064, 352 )
+shape = SubResource( 8 )
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 4032, 160 )
+shape = SubResource( 9 )
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 4832, 352 )
+shape = SubResource( 10 )
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 4864, 160 )
+shape = SubResource( 11 )
+one_way_collision = true
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 5824, 352 )
+shape = SubResource( 12 )
+one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 5760, -32 )
+shape = SubResource( 13 )
+one_way_collision = true
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 5760, 160 )
+shape = SubResource( 14 )
+one_way_collision = true
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 7168, 160 )
+shape = SubResource( 15 )
+one_way_collision = true
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 7136, 352 )
+shape = SubResource( 16 )
+one_way_collision = true
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Tile One-Way/StaticBody2D"]
+position = Vector2( 7872, 352 )
+shape = SubResource( 17 )
+one_way_collision = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+collision_use_kinematic = true
+collision_layer = 2
+collision_mask = 49
+format = 1
+tile_data = PoolIntArray( -524163, 0, 0, -458627, 0, 0, -393091, 0, 0, -327555, 0, 0, -262019, 0, 0, -131090, 0, 0, -196483, 0, 0, -65554, 0, 0, -130947, 0, 0, -18, 0, 0, -65411, 0, 0, 65518, 0, 0, 125, 0, 0, 131054, 0, 0, 65661, 0, 0, 196590, 0, 0, 131197, 0, 0, 262126, 0, 0, 196733, 0, 0, 327662, 0, 0, 262269, 0, 0, 393198, 0, 0, 393209, 7, 0, 327805, 0, 0, 458734, 0, 0, 393341, 0, 0, 524270, 0, 0, 458877, 0, 0, 589806, 0, 0, 589807, 6, 0, 589814, 6, 0, 589821, 6, 0, 524292, 6, 0, 524299, 6, 0, 524308, 6, 0, 524315, 6, 0, 524324, 6, 0, 524331, 6, 0, 524338, 6, 0, 524347, 6, 0, 524354, 6, 0, 524361, 6, 0, 524370, 6, 0, 524377, 6, 0, 524384, 6, 0, 524393, 6, 0, 524400, 6, 0, 524409, 6, 0, 524413, 0, 0, 655342, 0, 0, 589949, 0, 0, 720878, 0, 0, 655485, 0, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+offset = Vector2( 0, -385 )
+transform = Transform2D( 1, 0, 0, 1, 0, -385 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.25, 0.25 )
+motion_mirroring = Vector2( 1080, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 0, -31 )
+scale = Vector2( 1, 1.2 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0.4 )
+motion_mirroring = Vector2( 1080, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( -4.7569, -73.3018 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0.7 )
+motion_mirroring = Vector2( 1080, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2( 0, 289 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 3488, 832 )
+collision_layer = 2147483652
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 18 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 6 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+margin_left = 7.74008
+margin_top = 21.5198
+margin_right = 592.74
+margin_bottom = 173.52
+custom_styles/panel = SubResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_left = 19.0
+margin_top = 92.0
+margin_right = 85.0
+margin_bottom = 158.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 78.242
+margin_top = 83.6389
+margin_right = 142.242
+margin_bottom = 179.639
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 0.0196078, 0.313726, 0.764706, 1 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 122.282
+margin_top = 84.1588
+margin_right = 250.282
+margin_bottom = 180.159
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0.0392157, 0.141176, 0.956863, 1 )
+text = "##"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2( 30.2039, 9.43872 )
+
+[node name="Spritetraje" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 193.796, 54.5613 )
+texture = ExtResource( 9 )
+
+[node name="Spritegel" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 129.796, 54.5613 )
+texture = ExtResource( 9 )
+
+[node name="Spriteguantes" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 257.796, 54.5613 )
+texture = ExtResource( 9 )
+
+[node name="Spritejabon" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 321.796, 54.5613 )
+texture = ExtResource( 9 )
+
+[node name="Spritebarbijo" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 385.796, 54.5613 )
+texture = ExtResource( 9 )
+
+[node name="Spritelentes" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 449.796, 54.5613 )
+texture = ExtResource( 9 )
+
+[node name="Spritemascara" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 513.796, 54.5613 )
+texture = ExtResource( 9 )
+
+[node name="Node2D2" type="Node2D" parent="CanvasLayer"]
+position = Vector2( 30.2039, 9.43872 )
+
+[node name="Spritetraje" type="Sprite" parent="CanvasLayer/Node2D2"]
+visible = false
+position = Vector2( 193.796, 54.5613 )
+texture = ExtResource( 10 )
+
+[node name="Spritegel" type="Sprite" parent="CanvasLayer/Node2D2"]
+visible = false
+position = Vector2( 129.796, 54.5613 )
+texture = ExtResource( 11 )
+
+[node name="Spriteguantes" type="Sprite" parent="CanvasLayer/Node2D2"]
+visible = false
+position = Vector2( 257.796, 54.5613 )
+texture = ExtResource( 12 )
+
+[node name="Spritejabon" type="Sprite" parent="CanvasLayer/Node2D2"]
+visible = false
+position = Vector2( 321.796, 54.5613 )
+texture = ExtResource( 13 )
+
+[node name="Spritebarbijo" type="Sprite" parent="CanvasLayer/Node2D2"]
+visible = false
+position = Vector2( 385.796, 54.5613 )
+texture = ExtResource( 14 )
+
+[node name="Spritelentes" type="Sprite" parent="CanvasLayer/Node2D2"]
+visible = false
+position = Vector2( 449.796, 54.5613 )
+texture = ExtResource( 15 )
+
+[node name="Spritemascara" type="Sprite" parent="CanvasLayer/Node2D2"]
+visible = false
+position = Vector2( 513.796, 54.5613 )
+texture = ExtResource( 16 )
+
+[node name="Node2D4" type="Node2D" parent="CanvasLayer"]
+position = Vector2( 30.2039, 9.43872 )
+
+[node name="vidaperdida5" type="Sprite" parent="CanvasLayer/Node2D4"]
+position = Vector2( 257.796, 118.561 )
+texture = ExtResource( 17 )
+
+[node name="vidaperdida4" type="Sprite" parent="CanvasLayer/Node2D4"]
+position = Vector2( 321.796, 118.561 )
+texture = ExtResource( 17 )
+
+[node name="vidaperdida3" type="Sprite" parent="CanvasLayer/Node2D4"]
+position = Vector2( 385.796, 118.561 )
+texture = ExtResource( 17 )
+
+[node name="vidaperdida2" type="Sprite" parent="CanvasLayer/Node2D4"]
+position = Vector2( 449.796, 118.561 )
+texture = ExtResource( 17 )
+
+[node name="vidaperdida1" type="Sprite" parent="CanvasLayer/Node2D4"]
+position = Vector2( 513.796, 118.561 )
+texture = ExtResource( 17 )
+
+[node name="Node2D3" type="Node2D" parent="CanvasLayer"]
+position = Vector2( 30.2039, 9.43872 )
+
+[node name="vida5" type="Sprite" parent="CanvasLayer/Node2D3"]
+position = Vector2( 257.796, 118.561 )
+texture = ExtResource( 18 )
+
+[node name="vida4" type="Sprite" parent="CanvasLayer/Node2D3"]
+position = Vector2( 321.796, 118.561 )
+texture = ExtResource( 18 )
+
+[node name="vida3" type="Sprite" parent="CanvasLayer/Node2D3"]
+position = Vector2( 385.796, 118.561 )
+texture = ExtResource( 18 )
+
+[node name="vida2" type="Sprite" parent="CanvasLayer/Node2D3"]
+position = Vector2( 449.796, 118.561 )
+texture = ExtResource( 18 )
+
+[node name="vida1" type="Sprite" parent="CanvasLayer/Node2D3"]
+position = Vector2( 513.796, 118.561 )
+texture = ExtResource( 18 )
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+margin_left = 623.496
+margin_top = 37.9782
+margin_right = 815.496
+margin_bottom = 128.978
+custom_styles/panel = SubResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tiempo" type="Label" parent="CanvasLayer" groups=[
+"tiempo",
+]]
+margin_left = 623.496
+margin_top = 37.9782
+margin_right = 815.496
+margin_bottom = 128.978
+custom_fonts/font = SubResource( 23 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+autostart = true
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 192, 576 )
+normal = ExtResource( 19 )
+pressed = ExtResource( 48 )
+action = "moverderecha"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 32, 576 )
+normal = ExtResource( 20 )
+pressed = ExtResource( 47 )
+action = "moverizquierda"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 840, 576 )
+normal = ExtResource( 22 )
+pressed = ExtResource( 21 )
+action = "correr"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 960, 576 )
+normal = ExtResource( 23 )
+pressed = ExtResource( 24 )
+action = "saltar"
+
+[node name="armar" type="Node2D" parent="CanvasLayer"]
+position = Vector2( -1208.35, -85.3384 )
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/armar"]
+self_modulate = Color( 0.984314, 0.984314, 0.984314, 1 )
+margin_left = 2121.0
+margin_top = 110.0
+margin_right = 2256.0
+margin_bottom = 363.0
+custom_styles/panel = SubResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fondo" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+position = Vector2( 70.0284, 129.581 )
+texture = ExtResource( 25 )
+
+[node name="armartraje" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+visible = false
+position = Vector2( 70.16, 130.357 )
+texture = ExtResource( 26 )
+
+[node name="armarbarbijo" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+visible = false
+position = Vector2( 70.16, 130.357 )
+texture = ExtResource( 27 )
+
+[node name="armargel" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+visible = false
+position = Vector2( 70.16, 131.357 )
+texture = ExtResource( 28 )
+
+[node name="armarguantes" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+visible = false
+position = Vector2( 70.16, 130.357 )
+texture = ExtResource( 29 )
+
+[node name="armarjabon" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+visible = false
+position = Vector2( 70.16, 130.357 )
+texture = ExtResource( 30 )
+
+[node name="armarlentes" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+visible = false
+position = Vector2( 70.16, 130.357 )
+texture = ExtResource( 31 )
+
+[node name="armarmascara" type="Sprite" parent="CanvasLayer/armar/Panel3"]
+visible = false
+position = Vector2( 70.16, 130.357 )
+texture = ExtResource( 32 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Area2D2" parent="Node2D" instance=ExtResource( 33 )]
+position = Vector2( 800, 448 )
+
+[node name="Area2D" parent="Node2D" instance=ExtResource( 34 )]
+position = Vector2( 1824, 256 )
+
+[node name="Area2D3" parent="Node2D" instance=ExtResource( 35 )]
+position = Vector2( 4032, 64 )
+
+[node name="Area2D4" parent="Node2D" instance=ExtResource( 36 )]
+position = Vector2( 3008, 64 )
+
+[node name="Area2D5" parent="Node2D" instance=ExtResource( 37 )]
+position = Vector2( 4928, 448 )
+
+[node name="Area2D6" parent="Node2D" instance=ExtResource( 38 )]
+position = Vector2( 5792, -160 )
+
+[node name="Area2D7" parent="Node2D" instance=ExtResource( 39 )]
+position = Vector2( 7904, 224 )
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="KinematicBody2D" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( -288, 256 )
+
+[node name="KinematicBody2D7" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 2944, 288 )
+
+[node name="KinematicBody2D3" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 594.329, 82.4708 )
+
+[node name="KinematicBody2D4" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 256, 288 )
+
+[node name="KinematicBody2D5" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 1792, 96 )
+
+[node name="KinematicBody2D6" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 2848, -96 )
+
+[node name="KinematicBody2D13" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 5888, 96 )
+
+[node name="KinematicBody2D15" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 7040, 288 )
+
+[node name="KinematicBody2D17" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 7840, 288 )
+
+[node name="KinematicBody2D16" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 7072, 480 )
+
+[node name="KinematicBody2D14" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 5696, 288 )
+
+[node name="KinematicBody2D2" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 37.3606, 479.784 )
+
+[node name="KinematicBody2D8" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 1376, 480 )
+
+[node name="KinematicBody2D9" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 4000, 480 )
+
+[node name="KinematicBody2D10" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 2656, 480 )
+
+[node name="KinematicBody2D11" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 5312, 480 )
+
+[node name="KinematicBody2D12" parent="enemies" instance=ExtResource( 40 )]
+position = Vector2( 4832, 96 )
+
+[node name="Steve" parent="." instance=ExtResource( 41 )]
+position = Vector2( -872.819, 101.594 )
+collision_mask = 30
+
+[node name="Camera2D" type="Camera2D" parent="Steve"]
+current = true
+limit_left = -1088
+limit_top = -500
+limit_right = 8000
+limit_bottom = 700
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
+editor_draw_limits = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 42 )
+autoplay = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+script = ExtResource( 43 )
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2"]
+margin_left = 18.8988
+margin_top = 506.704
+margin_right = 230.899
+margin_bottom = 596.704
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2/MarginContainer"]
+visible = false
+margin_right = 212.0
+margin_bottom = 90.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/MarginContainer/HBoxContainer"]
+margin_right = 212.0
+margin_bottom = 90.0
+
+[node name="Stat01" type="Label" parent="CanvasLayer2/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 212.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 25 )
+text = "Label 1 :"
+
+[node name="Stat02" type="Label" parent="CanvasLayer2/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 45.0
+margin_right = 212.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 26 )
+text = "label 2 : "
+
+[node name="Node2D5" type="Node2D" parent="."]
+
+[node name="plata1" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 128, 448 )
+
+[node name="plata2" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 672, 256 )
+
+[node name="plata3" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 1088, 448 )
+
+[node name="plata4" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 1568, 256 )
+
+[node name="plata5" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 1888, 64 )
+
+[node name="plata6" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 2368, 448 )
+
+[node name="plata7" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 2656, 256 )
+
+[node name="plata8" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 2976, -128 )
+
+[node name="plata9" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 3264, 256 )
+
+[node name="plata10" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 3584, 448 )
+
+[node name="plata11" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 3968, 256 )
+
+[node name="plata12" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 4416, 448 )
+
+[node name="plata13" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 4928, 64 )
+
+[node name="plata14" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 5440, 256 )
+
+[node name="plata15" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 5696, -128 )
+
+[node name="plata16" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 6208, 256 )
+
+[node name="plata17" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 6528, 448 )
+
+[node name="plata18" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 7104, 64 )
+
+[node name="plata19" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 7424, 448 )
+
+[node name="plata20" parent="Node2D5" instance=ExtResource( 46 )]
+position = Vector2( 7936, 448 )
+[connection signal="body_entered" from="Area2D" to="Steve" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_Timer_timeout"]
+[connection signal="coin_collected" from="Node2D/Area2D2" to="CanvasLayer" method="_on_Area2D2_coin_collected"]
+[connection signal="coin_collected" from="Node2D/Area2D" to="CanvasLayer" method="_on_Area2D_coin_collected"]
+[connection signal="coin_collected" from="Node2D/Area2D3" to="CanvasLayer" method="_on_Area2D3_coin_collected"]
+[connection signal="coin_collected" from="Node2D/Area2D4" to="CanvasLayer" method="_on_Area2D4_coin_collected"]
+[connection signal="coin_collected" from="Node2D/Area2D5" to="CanvasLayer" method="_on_Area2D5_coin_collected"]
+[connection signal="coin_collected" from="Node2D/Area2D6" to="CanvasLayer" method="_on_Area2D6_coin_collected"]
+[connection signal="coin_collected" from="Node2D/Area2D7" to="CanvasLayer" method="_on_Area2D7_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata1" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata1" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata2" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata2" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata3" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata3" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata4" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata4" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata5" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata5" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata6" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata6" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata7" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata7" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata8" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata8" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata9" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata9" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata10" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata10" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata11" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata11" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata12" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata12" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata13" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata13" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata14" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata14" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata15" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata15" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata16" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata16" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata17" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata17" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata18" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata18" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata19" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata19" to="CanvasLayer" method="_on_plata1_coin_collected"]
+[connection signal="body_entered" from="Node2D5/plata20" to="CanvasLayer" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Node2D5/plata20" to="CanvasLayer" method="_on_plata1_coin_collected"]

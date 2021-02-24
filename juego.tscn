@@ -1,0 +1,215 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://ASSETS/fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
+[ext_resource path="res://ASSETS/music/Swinging Pants.ogg" type="AudioStream" id=3]
+[ext_resource path="res://ASSETS/portada.png" type="Texture" id=6]
+[ext_resource path="res://play.shader" type="Shader" id=7]
+[ext_resource path="res://ASSETS/play.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Monitor2.gd" type="Script" id=9]
+[ext_resource path="res://ASSETS/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://ASSETS/pumas.png" type="Texture" id=11]
+[ext_resource path="res://ASSETS/pumaspressed.png" type="Texture" id=12]
+[ext_resource path="res://ASSETS/logo.png" type="Texture" id=13]
+[ext_resource path="res://ASSETS/logomachaq.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+outline_size = 4
+outline_color = Color( 0.917647, 0.94902, 0.94902, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0941176, 0.643137, 0.203922, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color( 0.0313726, 0.0313726, 0.0313726, 0.6 )
+shadow_size = 20
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 53
+outline_size = 2
+outline_color = Color( 0.054902, 0.6, 0.0862745, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 7 )
+shader_param/mov = 10.0
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 10 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+margin_right = 2376.0
+margin_bottom = 1098.0
+color = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 543.713, 361.571 )
+scale = Vector2( 1.00753, 1.00374 )
+texture = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = -2.0
+margin_right = 1920.0
+margin_bottom = 1074.0
+color = Color( 0.694118, 0.0627451, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+visible = false
+margin_left = 194.064
+margin_top = 49.0203
+margin_right = 1747.06
+margin_bottom = 285.02
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0117647, 0.443137, 0.0980392, 1 )
+text = "Jallalla Mallku!!!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+margin_left = 84.6913
+margin_top = 583.083
+margin_right = 602.691
+margin_bottom = 829.083
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+visible = false
+margin_right = 452.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = 677.027
+margin_top = 557.475
+margin_right = 959.027
+margin_bottom = 743.475
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0.576471, 0.160784, 0.160784, 1 )
+custom_colors/font_color = Color( 0.972549, 0.964706, 0.94902, 1 )
+custom_colors/font_color_hover = Color( 0.109804, 0.980392, 0.411765, 1 )
+custom_colors/font_color_pressed = Color( 0.160784, 0.137255, 0.894118, 1 )
+icon = ExtResource( 11 )
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -12.0
+autoplay = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+material = SubResource( 4 )
+margin_left = 653.459
+margin_top = 284.405
+margin_right = 806.459
+margin_bottom = 435.405
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 9 )
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+visible = false
+margin_left = 338.984
+margin_top = 630.824
+margin_right = 456.984
+margin_bottom = 706.824
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+visible = false
+margin_right = 118.0
+margin_bottom = 76.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+visible = false
+margin_right = 118.0
+margin_bottom = 76.0
+
+[node name="Stat01" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
+margin_right = 118.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 5 )
+text = "Label 1 :"
+
+[node name="Stat02" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
+margin_top = 40.0
+margin_right = 118.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 6 )
+text = "Label 2 :"
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+visible = false
+position = Vector2( 566.36, 566.36 )
+texture = ExtResource( 11 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+visible = false
+margin_left = 313.393
+margin_top = 568.402
+margin_right = 583.393
+margin_bottom = 748.402
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 672, 640 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 13 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 448, 640 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 14 )
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="TextureButton" to="Button" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureButton2" to="Button" method="_on_TextureButton2_pressed"]

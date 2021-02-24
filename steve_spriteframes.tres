@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=2]
+
+[ext_resource path="res://ASSETS/mallku/walk-2-mallku.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/mallku/walk-3-mallku.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/mallku/walk-0-mallku.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/mallku/idle_mallku.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/mallku/walk-1-mallku.png" type="Texture" id=8]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "run",
+"speed": 8.0
+} ]
